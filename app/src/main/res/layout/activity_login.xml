@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="24dp"
         android:hint="Email">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tilEmail"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="24dp"
         android:hint="Password"
         app:passwordToggleEnabled="true">
 
@@ -40,15 +40,28 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/register"
+        android:id="@+id/login"
         style="@style/FirebaseUI.Button"
         android:layout_width="371dp"
         android:layout_height="61dp"
         android:layout_below="@+id/tilPassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="24dp"
         android:text="Login"
         android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/fgPassword"
+        style="@style/com_facebook_button_like"
+        android:layout_width="302dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/toRegister"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="24dp"
+        android:text="FORGET YOUR PASSWORD" />
 
     <Button
         android:id="@+id/toRegister"

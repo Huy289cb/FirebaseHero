@@ -1,30 +1,32 @@
 package huy289.cb.firebasehero;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
-    TextView tvUserName, tvProviderID, tvEmail, tvPhone, tvTenantID, tvUID;
-    ImageView ivAvt;
-    Button logout;
-
+    TextView tvUserName, tvProviderID, tvEmail;
+    EditText etCurrentPassword, etNewPassword;
+    Button logout, changepassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
-
     }
 
     @Override
@@ -42,10 +44,6 @@ public class MainActivity extends AppCompatActivity {
             tvUserName.setText("DisplayName: " + currentUser.getDisplayName());
             tvProviderID.setText("ProviderId: " + currentUser.getProviderId());
             tvEmail.setText("Email: " + currentUser.getEmail());
-            tvPhone.setText("Phone: " + currentUser.getPhoneNumber());
-//            tvTenantID.setText("Uri: " + currentUser.getPhotoUrl().toString());
-            tvUID.setText("UID: " + currentUser.getUid());
-//            ivAvt.setImageURI(currentUser.getPhotoUrl());
 //            Logout button onclick -> logout user -> StartActivity
             logout.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -67,10 +65,9 @@ public class MainActivity extends AppCompatActivity {
         tvUserName = findViewById(R.id.tvUsername);
         tvProviderID = findViewById(R.id.tvProviderID);
         tvEmail = findViewById(R.id.tvEmail);
-        tvPhone = findViewById(R.id.tvPhone);
-        tvTenantID = findViewById(R.id.tvTenantID);
-        tvUID = findViewById(R.id.tvUID);
-        ivAvt = findViewById(R.id.ivAvt);
         logout = findViewById(R.id.logout);
+        changepassword = findViewById(R.id.changepassword);
+        etCurrentPassword = findViewById(R.id.etCurrentPassword);
+        etNewPassword = findViewById(R.id.etNewPassword);
     }
 }

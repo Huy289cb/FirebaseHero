@@ -23,7 +23,7 @@ import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText email, password;
-    private Button login, toRegister;
+    private Button login, toRegister, fgPassword;
     private FirebaseAuth mAuth;
 
     @Override
@@ -34,6 +34,13 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         toRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+            }
+        });
+
+        fgPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
@@ -88,7 +95,8 @@ public class LoginActivity extends AppCompatActivity {
      public void getView() {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-        login = findViewById(R.id.register);
+        login = findViewById(R.id.login);
         toRegister = findViewById(R.id.toRegister);
+        fgPassword = findViewById(R.id.fgPassword);
      }
 }

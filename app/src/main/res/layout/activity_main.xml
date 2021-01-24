@@ -34,41 +34,6 @@
         android:text="Email"
         android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/tvPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvEmail"
-        android:layout_marginTop="20dp"
-        android:text="Phone"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/tvTenantID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvPhone"
-        android:layout_marginTop="20dp"
-        android:text="TenantID"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/tvUID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTenantID"
-        android:layout_marginTop="20dp"
-        android:text="UID"
-        android:textSize="24sp" />
-
-    <ImageView
-        android:id="@+id/ivAvt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvUID"
-        android:layout_marginTop="20dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <Button
         android:id="@+id/logout"
         style="@style/FirebaseUI.Button.AccountChooser.AnonymousButton"
@@ -81,4 +46,44 @@
         android:text="LOGOUT"
         android:textAlignment="center"
         android:textSize="18sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilP1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvEmail"
+        android:layout_marginTop="20dp"
+        android:hint="Enter your current password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCurrentPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilP2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tilP1"
+        android:layout_marginTop="20dp"
+        android:hint="Enter your current password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/changepassword"
+        style="@style/FirebaseUI.Button.AccountChooser.EmailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tilP2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:text="CHANGE PASSWORD"
+        android:textAlignment="center" />
 </RelativeLayout>
