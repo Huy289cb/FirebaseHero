@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "8332036524",
+    "project_id": "fir-hero-297bc",
+    "storage_bucket": "fir-hero-297bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8332036524:android:733151c0c7d764c977d209",
+        "android_client_info": {
+          "package_name": "huy289.cb.firebasehero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8332036524-4q2ot8rug2j9aklm506qnjdeotfeomkk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "huy289.cb.firebasehero",
+            "certificate_hash": "4e45ef7fa7a3e50bc705a3ef72778f7b8dedb4bd"
+          }
+        },
+        {
+          "client_id": "8332036524-un16hm5kvj01submtbrnrt5ejjsvdvoq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBguDuSUtlamLkVYUG9Ku35dN6b0qXRO8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8332036524-un16hm5kvj01submtbrnrt5ejjsvdvoq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

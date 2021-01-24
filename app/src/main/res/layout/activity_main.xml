@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:text="User Name"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvProviderID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUsername"
+        android:layout_marginTop="20dp"
+        android:text="ProviderID"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvProviderID"
+        android:layout_marginTop="20dp"
+        android:text="Email"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvEmail"
+        android:layout_marginTop="20dp"
+        android:text="Phone"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvTenantID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPhone"
+        android:layout_marginTop="20dp"
+        android:text="TenantID"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvUID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTenantID"
+        android:layout_marginTop="20dp"
+        android:text="UID"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/ivAvt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUID"
+        android:layout_marginTop="20dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/logout"
+        style="@style/FirebaseUI.Button.AccountChooser.AnonymousButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="LOGOUT"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+</RelativeLayout>
